@@ -4,21 +4,23 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int* b = new int[NELEMENTS]; //hibás változónév NELEMENTS nincs definiálva
-    std::cout << '1-100 ertekek duplazasa' //; hiány és '' helyett "" mivel ez string
-        for (int i = 0;) //Hiányos forciklus
+    int* b = new int[N_ELEMENTS];
+    std::cout << "1-100 ertekek duplazasa"<<std::endl; 
+    for (int i = 1; i < N_ELEMENTS+1; i++) 
         {
-            b[i] = i * 2;
+            b[i-1] = i * 2;
         }
-    for (int i = 0; i; i++) //Hiányos forciklus
+    for (int i = 0; i<N_ELEMENTS; i++)
     {
-        std::cout << "Ertek:" // nincs ;
+        std::cout << "Ertek: ";
+        std::cout << b[i]<<std::endl;
+
     }
     std::cout << "Atlag szamitasa: " << std::endl;
-    int atlag; //atlagot nem előnyös int ként definiálni és nincs daklaráció: atlag=0
-    for (int i = 0; i < N_ELEMENTS, i++) //for ciklus syntaxis hibás
+    double atlag=0;
+    for (int i = 0; i < N_ELEMENTS; i++) 
     {
-        atlag += b[i] // nincs ;
+        atlag += b[i];
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
