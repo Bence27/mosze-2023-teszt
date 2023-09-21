@@ -24,6 +24,6 @@ int main()
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
-    std::cout << "Szakker123 kommentje (Szakonyi Ádám)";
+    std::cout << "Szakker123 kommentje (Szakonyi Ádám) 2x";
     return 0;
 }
